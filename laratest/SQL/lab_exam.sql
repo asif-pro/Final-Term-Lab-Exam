@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2020 at 09:56 AM
+-- Generation Time: Sep 08, 2020 at 11:01 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -18,16 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `final_lab_exam`
+-- Database: `lab_exam`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jobs`
+-- Table structure for table `emp`
 --
 
-CREATE TABLE `jobs` (
+CREATE TABLE `emp` (
   `company_name` varchar(100) NOT NULL,
   `job_title` varchar(100) NOT NULL,
   `job_location` varchar(100) NOT NULL,

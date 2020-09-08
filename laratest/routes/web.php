@@ -16,6 +16,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/login', 'LoginController@index')->name('login.index');
+Route::post('/login', ['uses'=>'LoginController@verify']);
+
+
+
+
 Route::middleware(['sess'])->group(function(){
-    Route::get('/home', 'HomeController@index');
-});
+
+	Route::get('/home', 'HomeController@index')->name('home');
+
+/*	Route::group(['middleware'=>['type']], function(){
+		Route::get('/admin/create', 'HomeController@create')->name('home.create');
+		Route::post('/admin/create', 'HomeController@store');
+		Route::get('/admin/edit/{id}', 'HomeController@edit')->name('home.edit');
+		Route::post('/admin/edit/{id}', 'HomeController@update');
+		Route::get('/home/delete/{id}', 'HomeController@delete')->name('home.delete');
+		Route::post('/home/delete/{id}', 'HomeController@destroy');*/
+	});
+	

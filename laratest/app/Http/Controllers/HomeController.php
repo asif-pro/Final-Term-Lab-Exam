@@ -17,8 +17,8 @@ class HomeController extends Controller
     function index(Request $request){
 
 
-        $users = DB::table('user_table')->get();
-        return view('index')->with('users', $users);
+        $users = DB::table('user')->get();
+        return view('home')->with('users', $users);
     }
 
 
