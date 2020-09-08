@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 use App\User;
-use App\Http\Requests\UserRequests;
-
 
 //use Validator;
 
@@ -17,8 +17,9 @@ class HomeController extends Controller
     function index(Request $request){
 
 
-        $users = DB::table('user')->get();
-        return view('home')->with('users', $users);
+       $user = new User();
+        $userList = $user->get();
+        return view('home')->with('userList', $userList);
     }
 
 
