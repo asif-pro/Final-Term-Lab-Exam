@@ -10,7 +10,7 @@
 <body>
     <div>
         <h1>Home<h1>
-        <a href="home/createUser">Crate User</a>
+        <a href="home/createEmp">Crate Employee</a>
         <a href="/logout">Logout</a>
     
     <div>
@@ -19,7 +19,7 @@
                 <td>User Name</td>
                 <td>Password</td>
                 <td>Type</td>
-                <td>Full Name</td>
+                <td>Employee Name</td>
                 <td>Company Name</td>
                 <td>Contact Number</td>
                 <td>Actions</td>

@@ -24,10 +24,26 @@ class HomeController extends Controller
 
 
     public function create(Request $request){
+
+        return view('createEmp');
+    
        
     }
 
     public function store(Request $request){
+
+    	 $user = new User();
+
+        $user->username = $request->username;
+        $user->password = $request->password;
+        $user->type = $request->type;
+        $user->employee_name = $request->name;
+        $user->company_name = $request->companyname;
+        $user->contact_number = $request->contactnumber;
+        
+        $user->save();
+
+        return redirect('home');
 
     }
 
